@@ -1,0 +1,33 @@
+<mat-card class="title"><h3 class="display-4">Már felvett rekordok adatai</h3></mat-card>
+
+<table class="table table-hover">
+    <thead>
+        <th>Azonosító</th>
+        <th>Link</th>
+        <th>Leírás</th>
+        <th>Elnevezés</th>
+        <th>Megvalósulás</th>
+        <th>Időpont</th>
+        <th>Típus</th>
+        <th>Érték</th>
+        <th>Lehetőségek</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let sales of list">
+            <td (click)="onEdit(sales)">{{sales.idStr}}</td>
+            <td (click)="onEdit(sales)">{{sales.hrefStr}}</td>
+            <td (click)="onEdit(sales)">{{sales.descriptionStr}}</td>
+            <td (click)="onEdit(sales)">{{sales.nameStr}}</td>
+            <td (click)="onEdit(sales)">{{sales.ratingStr}}</td>
+            <td (click)="onEdit(sales)">{{sales.referredDateStr}}</td>
+            <td (click)="onEdit(sales)">{{sales.typeStr}}</td>
+            <td (click)="onEdit(sales)">{{sales.estimatedRevenue}}</td>
+            <td>
+                <button class="btn text"
+                (click)="onDelete(sales.idStr)"
+                style="border-color: coral !important;
+                background-color: coral !important;">Törlés</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
