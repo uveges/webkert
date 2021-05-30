@@ -1,0 +1,84 @@
+<mat-card class="title"><h3 class="display-4">SalesLead felvitele / módosítása</h3></mat-card>
+<mat-card class="form">
+    <mat-card-title>Értékek megadása:</mat-card-title>
+    <mat-card-content>
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <div class="form-group">
+        <input name="idStr" 
+        #idStr="ngModel" 
+        [(ngModel)]="service.formData.idStr" 
+        class="form-control"
+        hidden
+        >
+    </div>
+    <div class="form-group">
+        <input name="hrefStr" 
+        #hrefStr="ngModel" 
+        [(ngModel)]="service.formData.hrefStr" 
+        class="form-control" 
+        placeholder="Kapcsolódó link">
+    </div>
+    <div class="form-group">
+        <input name="descriptionStr" 
+        #descriptionStr="ngModel" 
+        [(ngModel)]="service.formData.descriptionStr" 
+        class="form-control" 
+        placeholder="Leírás"
+        required>
+    </div>
+    <div class="validation-error"
+    *ngIf="descriptionStr.invalid && descriptionStr.touched">
+    A mező kitöltése kötelező!</div>
+    <div class="form-group">
+        <input name="nameStr" 
+        #nameStr="ngModel" 
+        [(ngModel)]="service.formData.nameStr" 
+        class="form-control" 
+        placeholder="Elnevezés">
+    </div>
+    <div class="form-group">
+        <input name="ratingStr" 
+        #ratingStr="ngModel" 
+        [(ngModel)]="service.formData.ratingStr" 
+        class="form-control" 
+        placeholder="Megvalósulási potenciál">
+    </div>
+    <div class="form-group">
+        <input name="referredDateStr" 
+        #referredDateStr="ngModel" 
+        [(ngModel)]="service.formData.referredDateStr" 
+        class="form-control" 
+        placeholder="Megbeszélés ideje"
+        required>
+    </div>
+    <div class="validation-error"
+    *ngIf="referredDateStr.invalid && referredDateStr.touched">
+    A mező kitöltése kötelező!</div>
+    <div class="form-group">
+        <input name="typeStr" 
+        #typeStr="ngModel" 
+        [(ngModel)]="service.formData.typeStr" 
+        class="form-control" 
+        placeholder="Típus">
+    </div>
+    <div class="form-group">
+        <input name="estimatedRevenue" 
+        #estimatedRevenue="ngModel" 
+        [(ngModel)]="service.formData.estimatedRevenue" 
+        class="form-control" 
+        placeholder="Becsült piaci érték" 
+        required>
+    </div>
+    <div class="validation-error"
+    *ngIf="estimatedRevenue.invalid && estimatedRevenue.touched">
+    A mező kitöltése kötelező!</div>
+    <div class="form-group">
+        <button id="submit" 
+        class = "submit"
+        type="submit" 
+        [disabled]="form.invalid"
+        class="btn btn-md btn-block btn-info">Beküldés</button>
+    </div>
+</form>
+</mat-card-content>
+</mat-card>

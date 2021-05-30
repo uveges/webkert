@@ -1,0 +1,64 @@
+.form-group {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+td {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    margin-left: 60px !important;
+    margin-right: 60px !important;
+}
+
+th {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    margin-left: 60px !important;
+    margin-right: 60px !important;
+}
+
+button {
+    background-color: #20c997 !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    margin-right: 60px !important;
+}
+
+button:hover {
+    font-weight: 900;
+}
+
+input.ng-touched.ng-invalid{
+    border-color: red;
+}
+
+div.validation-error {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: red;
+}
+
+table.table-hover tbody tr:hover{
+    cursor: pointer;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-card.title {
+    margin-bottom: 30px;
+    padding: 5%;
+    background-color: azure;
+    color:cadetblue;
+    border: 2px;
+    border-color: darkcyan;
+}
+
+mat-card.form{
+    background-color:rgb(239, 244, 245);
+}
+
+mat-card-content{
+    background-color:rgb(250, 254, 255);
+    padding: 15px;
+}
