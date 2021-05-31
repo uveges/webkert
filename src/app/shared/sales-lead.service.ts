@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { SalesLead } from './sales-lead.model';
+import { SalesLead } from '../shared/sales-lead.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,5 +13,4 @@ export class SalesLeadService {
     getSalesLeads(){
         return this.firestore.collection("salesLeads").snapshotChanges();       //Observable -t ad vissza
     }
-
 }
